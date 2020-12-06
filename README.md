@@ -18,7 +18,8 @@ The User can insert a burger name of their choice choose to eat it and then dele
 
 ## links
 
-https://github.com/RutgersCodingBootcamp/burger.git
+GitHub - https://github.com/RutgersCodingBootcamp/burger.git
+Heroku - https://eat-the-burger1.herokuapp.com/
 
 ## Demo
 
