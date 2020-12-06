@@ -3,7 +3,7 @@ const orm = require("../config/orm.js");
 let burger = {
   //Select burgers tbl
   selectALL: function (cb) {
-    orm.selectOne("burgers", function (res) {
+    orm.selectAll("burgers", function (res) {
       cb(res);
     });
   },
@@ -15,17 +15,12 @@ let burger = {
   },
   //Update the boolean of a burger
   updateOne: function (condition, cb) {
-    orm.updateOne(
-      "burgers",
-      "devoured=1",
-      condition,
-      function (res) {
-        cb(res);
-      }
-    );
+    orm.updateOne("burgers", "devoured = 1", condition, function (res) {
+      cb(res);
+    });
   },
-  deleteOne: function (val, cb) {
-    orm.deleteOne("burgers", `burger_name="${val}"`, function (res) {
+  deleteOne: function (condition, cb) {
+    orm.deleteOne("burgers", condition, function (res) {
       cb(res);
     });
   },

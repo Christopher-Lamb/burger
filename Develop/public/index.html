@@ -10,14 +10,14 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="./assets/js/burgers.js"></script>
+    <script src="assets/js/burgers.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="center">
-        <img src="assets/images/burger.png" alt="Burger Image" />
+        <img src="./assets/images/burger.png" alt="Burger Image" />
       </div>
       <h1 class="center">EAT-Da-Burger</h1>
       <div class="center">
@@ -27,6 +27,7 @@
           type="text"
           placeholder="BURGERS!"
           name="burger"
+          maxlength="30"
         />
         <button id="burger-btn" type="submit">Submit</button>
       </div>
@@ -37,7 +38,7 @@
         <div class="col-sm-6">
           <ul id="burger-list"></ul>
         </div>
-        <div class="col-sm-6"><ul class="col-sm-6"></ul></div>
+        <div class="col-sm-6"><ul id="delete-list"></ul></div>
       </div>
     </div>
   </body>

@@ -9,7 +9,7 @@ const orm = {
     });
   },
   insertOne: function (table, col, val, cb) {
-    let queryString = `INSERT INTO ${table} (${col}) VALUES(??);`;
+    let queryString = `INSERT INTO ${table} (${col}) VALUE(?);`;
     connection.query(queryString, val, function (err, result) {
       if (err) throw err;
       cb(result);

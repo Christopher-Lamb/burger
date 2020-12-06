@@ -1,10 +1,13 @@
 const express = require("express");
+
 const router = express.Router();
 
 const burger = require("../models/burgers.js");
 
+const path = require("path");
+
 router.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "public/index.html"));
+  res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 //Create Routes With Logic
@@ -23,11 +26,11 @@ router.post("/burgers", function (req, res) {
 
 router.put("/burgers/:id", function (req, res) {
   let condition = `id = ${req.params.id}`;
-  burger.updateOne({ devoured: 1 }, condition, function (result) {
+  burger.updateOne(condition, function (result) {
     if (result == 0) {
       return res.status(404).end();
     } else {
-      res.join({ id: req.params.id });
+      res.json({ id: req.params.id });
     }
   });
 });
