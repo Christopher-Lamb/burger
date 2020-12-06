@@ -2,7 +2,6 @@ $(document).ready(function () {
   $.ajax("/burgers", {
     type: "GET",
   }).then(function (data) {
-    console.log(data);
     let burgers = data.burgers;
     for (let i = 0; i < burgers.length; i++) {
       //Devour Button
